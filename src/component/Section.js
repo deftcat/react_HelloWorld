@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 
 export default class Section extends Component {
-
+  constructor() {
+    super();
+  }
+  handleChange(event) {
+    const value = event.target.value;
+    console.log(value);
+       this.props.changeSubtitle(value);
+  }
   render() {
+ 
     let https = 'https://jsonplaceholder.typicode.com/comments';
     return (
-      <section>the section</section>
+      <div>
+        <input name='Subtitle' onChange={this.handleChange.bind(this)} />
+        <section>the section</section>
+      </div>
     );
   }
 }
