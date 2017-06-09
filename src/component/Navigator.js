@@ -2,6 +2,7 @@ import React from 'react';
 
 import Breads from './store/Breads';
 import Sweets from './store/Sweets';
+import Game from './tic-tac-toe/Game'
 import {
   BrowserRouter as Router,
   Route, Link, NavLink
@@ -62,6 +63,7 @@ const Navigator = () => (
         <li><Link to="/">Home</Link></li>
         <li><Link to="/breads">Breads</Link></li>
         <li><NavLink to="/sweets" activeClassName='selected'>Sweets</NavLink></li>
+        <li><Link to='/game'>Game</Link></li>
         <li><Link to="/topics">Topic</Link></li>
       </ul>
 
@@ -70,6 +72,7 @@ const Navigator = () => (
       <Route exact path="/" component={Home} />
       <Route path="/breads" component={Breads} />
       <Route path="/sweets" component={Sweets} />
+      <Route path='/game' component={Game} />
       <Route path="/topics" component={Topics} />
     </div>
   </Router>
