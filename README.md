@@ -1,4 +1,4 @@
-#HelloWorld of React
+# HelloWorld of React
   see the [demo](https://deftcat.github.io/react_HelloWorld/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
