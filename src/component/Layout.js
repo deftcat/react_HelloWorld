@@ -9,6 +9,7 @@ export default class Layout extends Component {
             <div>
                 <Header />
                 <Navigator />
+                <hr/>
                 <Container />
                 <Footer />
                 <h6>{this.props.author}</h6>

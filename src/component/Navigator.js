@@ -50,7 +50,7 @@ const Topics = ({ match }) => (
     )} />
     <Route path={`${match.url}/:topicId`} component={Topic} />
     <Route exact path={match.url} render={() => (
-      <h3>Please select a topic.</h3>
+      <h3>Please select a topic. (exact)</h3>
     )} />
   </div>
 )
@@ -62,7 +62,7 @@ const Navigator = () => (
         <li><Link to="/">Home</Link></li>
         <li><Link to="/breads">Breads</Link></li>
         <li><NavLink to="/sweets" activeClassName='selected'>Sweets</NavLink></li>
-        <li><Link to="/topic">Topic</Link></li>
+        <li><Link to="/topics">Topic</Link></li>
       </ul>
 
       <hr />
