@@ -2,7 +2,7 @@ import React from 'react';
 
 import Breads from './store/Breads';
 import Sweets from './store/Sweets';
-import Game from './tic-tac-toe/Game'
+import Game from './Game/Game'
 import {
   BrowserRouter as Router,
   Route, Link, NavLink
