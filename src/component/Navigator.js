@@ -1,0 +1,77 @@
+import React from 'react';
+
+import Breads from './store/Breads';
+import Sweets from './store/Sweets';
+import {
+  BrowserRouter as Router,
+  Route, Link, NavLink
+} from 'react-router-dom'
+
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+  </div>
+)
+
+// const About = () => (
+//   <div>
+//     <h2>About</h2>
+//   </div>
+// )
+
+const Topic = ({ match }) => (
+  <div>
+    <h3>{match.params.topicId}</h3>
+  </div>
+)
+
+const Topics = ({ match }) => (
+  <div>
+    <h2>Topics</h2>
+    <ul>
+      <li>
+        <Link to={`${match.url}/rendering`}>
+          Rendering with React
+        </Link>
+      </li>
+      <li>
+        <Link to={`${match.url}/components`}>
+          Components
+        </Link>
+      </li>
+      <li>
+        <Link to={`${match.url}/props-v-state`}>
+          Props v. State
+        </Link>
+      </li>
+    </ul>
+    <Route path={match.url} render={() => (
+      <h3 st>Please select a topic.</h3>
+    )} />
+    <Route path={`${match.url}/:topicId`} component={Topic} />
+    <Route exact path={match.url} render={() => (
+      <h3>Please select a topic.</h3>
+    )} />
+  </div>
+)
+
+const Navigator = () => (
+  <Router>
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/breads">Breads</Link></li>
+        <li><NavLink to="/sweets" activeClassName='selected'>Sweets</NavLink></li>
+        <li><Link to="/topic">Topic</Link></li>
+      </ul>
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
+      <Route path="/breads" component={Breads} />
+      <Route path="/sweets" component={Sweets} />
+      <Route path="/topics" component={Topics} />
+    </div>
+  </Router>
+)
+export default Navigator
