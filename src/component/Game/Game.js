@@ -26,6 +26,16 @@ class Board extends Component {
             {this.randerSquare(1)}
             {this.randerSquare(2)}
         </div>
+                <div className="board-row">
+            {this.randerSquare(3)}
+            {this.randerSquare(4)}
+            {this.randerSquare(5)}
+        </div>
+                <div className="board-row">
+            {this.randerSquare(6)}
+            {this.randerSquare(7)}
+            {this.randerSquare(8)}
+        </div>
             </div>
         )
     }
