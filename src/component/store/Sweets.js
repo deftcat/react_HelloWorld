@@ -10,11 +10,17 @@ const Sweets = ({ match }) => (
   </div>
 );
 const Sweet = () => (
-  <div><p>
-    cookies!!!!!
-  </p></div>
+  <div>
+    <Chocolate>
+      cookies!!!!!
+    </Chocolate>
+  </div>
 
 )
+const Chocolate = (props) => (
+  <h6 style={{ color: 'red' }}>  {props.children}</h6>
+)
+
 
 
 export default Sweets;
