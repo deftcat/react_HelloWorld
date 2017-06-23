@@ -12,10 +12,10 @@ export default class Container extends Component {
         this.changeEvent = this.changeEvent.bind(this);
     }
     componentDidMount() {
-        let user = fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then((results) => { this.setState({ results: results.map((result => result.username)) }) });
-        //console.log(user);    
+        //tip: let user = fetch... ; console.log(user);    
     }
     changeSubtitle(subtitle) {
         this.setState({ subtitle });
